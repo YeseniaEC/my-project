@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   public query: string;
   public queryString: string;
   public postList;
-  title = 'WTT';
+  title = 'Reddit Search';
 
   constructor(
     private http: HttpClient,
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   searchPosts() {
     console.log('bound!', this.query);
-    this.queryString = `https://www.reddit.com/r/all/search.json?q=${this.query}&limit=5`;
+    this.queryString = `https://www.reddit.com/r/all/search.json?q=${this.query}&limit=6`;
     console.log('queryString', this.queryString);
     this.getPosts();
   }
